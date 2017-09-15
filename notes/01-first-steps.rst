@@ -1,0 +1,196 @@
+First steps in the python world
+===============================
+
+In this session we installed the python to our local computers,
+and tried different basic commands to execute.
+
+Choose of language
+------------------
+
+We started to learn python a bit. My main objective for the first few
+session is to make you interested and understand some concepts.
+I've decieded to introduce `python <https://www.python.org>` first.
+Not just because at `made.com <https://made.com/>` we use that mainly
+for our backoffice services, but I believe that's a very good lanugage
+to learn first. The introduced concepts can be applied mainly on any
+language.
+
+
+First python tutorial
+---------------------
+
+One of the tutorial that we plan to go through together:
+https://cscircles.cemc.uwaterloo.ca/
+
+To be able to complete this tutorial you don't need to install anything
+locally.
+
+
+Install anaconda
+----------------
+
+As we learn things through the tutorial is worth to try them locally as well.
+Although, installing python to everybody computer can be a difficult task for me.
+Python suppose to work same (in most of the cases) in any operating system,
+but the tools around python, installing dependences (I'll cover it later),
+can be very difficult.
+
+We use `Anaconda <https://www.anaconda.com>` to manage python packages.
+That's a very popular choice amongst Data Scientists, who want to focus
+to build the script and accomplish tasks using python.
+
+It comes with many tools like:
+- `Anaconda Navigator <https://docs.anaconda.com/anaconda/navigator/>`
+- `Spyder <https://pythonhosted.org/spyder/>` as a powerful code editor.
+- `jupyter <http://jupyter.readthedocs.io/en/latest/>` which is python console through web
+
+Hello World
+-----------
+
+We wrote together one of the most common program, which is well known amongst every programmer
+in every level, the `Hello World` program.
+
+The code is only `print("Hello World")`. It only prints "Hello World" to the screen,
+although this has an important information as well, our setup works well.
+
+Strings
+-------
+
+In this first session we've understood (if not, please let me know!!!) what is a string.
+String is basically sequence of characters. We can use `'`, `"` (single and double quotes)
+to encapsulate that.
+String is a very important type in python (in any language).
+
+I've showed how can we concatenate strings together: `"first name" + " " + 'last name'`.
+
+Numbers
+-------
+
+Python works well with numbers as well. It understands the `3 + 4` statements as well.
+
+We've tried to concatenate numbers and strings, and we saw a rather ugly error message:
+
+>>> "hello" + 2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: must be str, not int
+>>>>
+
+Variables
+---------
+
+The next thing I've showed is how to use variables.
+Variables represents reserved memory blocks that we can access using a label, the name of the variable.
+I've showed how can you assign values to variable, and how can you reassign new values.
+
+>>> first_name = "Csaba"
+>>> last_name = "Palankai"
+>>> print(first_name, last_name)
+Csaba Palankai
+
+We can use a 3rd variable to keep the concatenated value of them:
+
+>>> full_name = first_name + ' ' + last_name
+>>> print(full_name)
+Csaba Palankai
+
+
+We can reassign the values of existing variables:
+>>> first_name = 'Gitta'
+>>> print(full_name)
+Csaba Palankai
+
+Surprise, you may expected to see my my sister name, although,
+we have to set the value of `full_name` again in order to do that.
+
+>>> full_name = first_name + ' ' + last_name
+>>> print(full_name)
+Gitta Palankai
+
+
+A real problem
+--------------
+
+I had a real problem a few days ago. I wanted to have some water for my
+coffee which is around 80°C. Although I only have boiling water or 20°C.
+I've decided to mix them to achieve my goal.
+
+I used a small python script:
+
+>>> amount_boiling = 1
+>>> temp_boiling = 100
+>>> amount_cold = 0.3
+>>> temp_cold = 20
+>>> (amount_boiling * temp_boiling + amount_cold * temp_cold) / (amount_boiling + amount_cold)
+81.53846153846153
+
+You can see how easy is to use python to calculate something useful.
+
+Functions
+---------
+
+Let's imagine you have to do similar calculation many times.
+But as a programmer you will make mistakes (which is perfectly normal), but you can
+avoid them. You have o avoid repeating yourself.
+
+>>> def calculate_mixed_water_temperature(added_water_amount):
+...     amount_boiling = 1
+...     temp_boiling = 100
+...     amount_cold = added_water_amount
+...     temp_cold = 20
+...     return (amount_boiling * temp_boiling + amount_cold * temp_cold) / (amount_boiling + amount_cold)
+...
+>>> calculate_mixed_water_temperature(.3)
+81.53846153846153
+>>> calculate_mixed_water_temperature(.3)
+81.53846153846153
+>>> calculate_mixed_water_temperature(.2)
+86.66666666666667
+>>> calculate_mixed_water_temperature(.4)
+77.14285714285715
+
+As you can see we can easily reuse the written function.
+We can easily try it with different values.
+
+Reading of the traceback, understanding errors
+----------------------------------------------
+
+>>> def calculate_mixed_water_temperature(added_water_amount):
+...     amount_boiling = 1
+...     temp_boiling = 100
+...     amount_cold = added_water_amount
+...     temp_cold = 20
+...     return (amount_boiling * temp_boiling + amount_cold * temp_cold) / (unknown_variable + amount_cold)
+...
+>>> calculate_mixed_water_temperature(.4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 6, in calculate_mixed_water_temperature
+NameError: name 'unknown_variable' is not defined
+
+I've intentionally replaced one variable in the code. And python doesn't like me anymore.
+I encourage you to copy the error message `NameError: name 'unknown_variable' is not defined`
+and try to search on google (or any preferred search engine).
+Although, in this case it's easy to understand the error.
+The traceback says the line numbers, so you can easily find the error.
+
+Questions
+---------
+
+How can you remember the name/meaning of a variable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There is no easy way to remember them. It's only a best practice but
+you can use long(er) variable names, so when you read a code weeks later,
+or use the variable somewhere else you can read that.
+
+Why I type many spaces around symbols
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Spaces are just helps to read the code. Both of the following statements are good:
+
+>>> (amount_boiling * temp_boiling + amount_cold * temp_cold) / (amount_boiling + amount_cold)
+81.53846153846153
+
+>>> (amount_boiling*temp_boiling+amount_cold*temp_cold) /      (amount_boiling+   amount_cold)
+81.53846153846153
