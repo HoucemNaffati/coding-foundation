@@ -32,14 +32,14 @@ English.
 
 Basically we only have to translate this code to python.
 
-I encourage you if you ever have to solve a program with any
+I encourage you if you ever have to solve a problem with any
 programming language start to design the code like this.
 Don't worry if you cannot translate that just yet, but
 understand how to solve an problem is the most important part
 of programming.
 
-We can play with that if we run this program in our mind:
-Evaluate every line and do what it says *exactly* (not more!) and
+We can play with that, running this program in our mind:
+Evaluate every line, do what it says *exactly* (not more!) and
 write down the state of variables, like the following:
 
 +-----------------------------------------------------+---------+---------+
@@ -98,45 +98,43 @@ write down the state of variables, like the following:
 | End of program, no more statement...                |       5 |       5 |
 +-----------------------------------------------------+---------+---------+
 
-
 Explanation why we set -1 to Guess
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If we don't initialise the `Guess` we cannot compare it to a number.
-We had to find an appropriate value for that, which will be good
+If we don't initialise the `Guess` we cannot compare it with a number.
+We had to find an appropriate initial value for that, which will be good
 enough to enter the loop.
-
 
 Write the python code
 ---------------------
 
 As I mentioned above, we just have to translate, but how?
-We need do the following in python:
+
+We need to do the following in python:
 - Pick a random number
 - Ask the user to enter a number
 - Repeat some code
 - Compare numbers and take decision based on that
 
-For the loop I cannot give you links, since in python
-you can do it in many ways and I think it's easier to
-focus on one simple solution.
+For the loop (repeat) and for the decision I cannot give you links,
+since in python you can do it in many ways and I think it's easier to
+focus on one simple solution that I give you.
+We will discover later all of the possibilities.
 
 Pick a random number
 ~~~~~~~~~~~~~~~~~~~~
 
-`Go to the official python documentation<https://docs.python.org/3/library/random.html>`
+`Visit to the official python documentation <https://docs.python.org/3/library/random.html>`
+
+The function we are looking for: https://docs.python.org/3/library/random.html#random.randint
 
 You can and should use google to find answers, nothing wrong with that.
-The good googling skills are very important!
-
-I've found the following links, and I think it could help you to understand
-the python abilities to pick random numbers:
-http://www.pythonforbeginners.com/random/how-to-use-the-random-module-in-python
-
-An another good link: https://stackoverflow.com/questions/3996904/generate-random-integers-between-0-and-9
+I found the following links, you might find them helpful:
+- http://www.pythonforbeginners.com/random/how-to-use-the-random-module-in-python
+- https://stackoverflow.com/questions/3996904/generate-random-integers-between-0-and-9
 
 Usually when I want to understand something, I try to search for something like this:
-`python random example`
+`python random example` (in this case the random is the keyword).
 
 Ask the user to enter a number
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -144,7 +142,6 @@ Ask the user to enter a number
 We will use the built-in python function, called `input()`:
 
 https://docs.python.org/3/library/functions.html#input
-
 
 Translate to python
 -------------------
