@@ -153,7 +153,7 @@ Modules in python
 ~~~~~~~~~~~~~~~~~
 
 If you start write a program, you reach the point
- very soon, when you feel the code is getting disorganised, the file is getting too big.
+very soon, when you feel the code is getting disorganised, the file is getting too big.
 You can separate the code into multiple files and you can use
 the code from the other file.
 
