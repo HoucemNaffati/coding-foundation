@@ -15,6 +15,7 @@ to write down the steps for this game, you can use plain
 English.
 
 .. code-block::
+
    Number = Pick a random number between 1 and 10
 
    Guess = -1
@@ -163,6 +164,7 @@ written by somebody else.
 Syntax the following:
 
 .. code-block:: python
+
           import random
           # And we can use the random module now:
           number = random.randint(1, 10)
