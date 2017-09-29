@@ -48,9 +48,9 @@ write down the state of variables, like the following:
 | Start the program                                   | Nothing | Nothing |
 +-----------------------------------------------------+---------+---------+
 | Pick the random number, let's say 5                 |         |         |
-| Set to Number                                       |       5 | Nothing |
+| Set to Number                                       |     *5* | Nothing |
 +-----------------------------------------------------+---------+---------+
-| Set the Guess to -1 (initialise)                    |       5 |      -1 |
+| Set the Guess to -1 (initialise)                    |       5 |    *-1* |
 +-----------------------------------------------------+---------+---------+
 | Repeat the following code                           |         |         |
 | if Guess is not equal to Number. This statement is  |         |         |
@@ -58,7 +58,7 @@ write down the state of variables, like the following:
 | the loop.                                           |       5 |      -1 |
 +-----------------------------------------------------+---------+---------+
 | Ask user to guess a number and set Guess            |         |         |
-| Let's assume user types 3                           |       5 |       3 |
+| Let's assume user types 3                           |       5 |     *3* |
 +-----------------------------------------------------+---------+---------+
 | Decide if Number is lower than Guess                |         |         |
 | It is not, we don't do anything else                |       5 |       3 |
@@ -77,7 +77,7 @@ write down the state of variables, like the following:
 | so we enter to the loop again                       |       5 |       3 |
 +-----------------------------------------------------+---------+---------+
 | Ask user to guess a number and set Guess            |         |         |
-| Let's assume user types 5                           |       5 |       5 |
+| Let's assume user types 5                           |       5 |     *5* |
 +-----------------------------------------------------+---------+---------+
 | Decide if Number is lower than Guess                |         |         |
 | It is not, we don't do anything else                |       5 |       5 |
