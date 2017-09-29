@@ -152,16 +152,18 @@ Translate to python
 Modules in python
 ~~~~~~~~~~~~~~~~~
 
-If you start write a program very soon you reach the point
-when you feel the code is getting disorganised, file is getting too big.
+If you start write a program, you reach the point
+ very soon, when you feel the code is getting disorganised, the file is getting too big.
 You can separate the code into multiple files and you can use
-that from the others.
-The other good thing of doing this is that you can use your code again
+the code from the other file.
+
+The other benefit of doing this is that you can use your code again
 as part of different application.
-The third and maybe the most important part that we can use code
+
+The third and maybe the most important benefit that we can use code
 written by somebody else.
 
-Syntax the following:
+Syntax is the following:
 
 .. code-block:: python
 
