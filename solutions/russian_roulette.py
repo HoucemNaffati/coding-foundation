@@ -1,5 +1,6 @@
 import random
 
+
 bullet_chamber = random.randint(1, 6)
 players = ['player 1', 'player 2', 'player 3', 'player 4']
 

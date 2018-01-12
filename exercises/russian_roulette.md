@@ -1,3 +1,5 @@
+# Russian Roulette
+
 Write a program that prints what happens during a game of russian roulette.
 In a game with 4 players, a gun with 6 chambers,
 only one bullet randomly placed in one of the chambers,

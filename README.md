@@ -9,5 +9,3 @@ NOTE: We may forget from time to time to add things here, please ask the teacher
 - [notes](notes/)
 - [exercises](exercises/)
 - [solutions](solutions/)
-
-

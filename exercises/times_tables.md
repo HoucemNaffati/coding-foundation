@@ -1,3 +1,5 @@
+# Times Table
+
 Write a times tables for 1 to 5:
 Go through the numbers you want to do the times tables for and print all the
 operations.
