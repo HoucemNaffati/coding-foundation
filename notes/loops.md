@@ -2,6 +2,7 @@ Loops:
 
 # this loops through ten numbers and prints them
 
+```
 for i in range(1, 11): # Note the 11, the range program is not inclusive for it's second argument
     print(i)
 
@@ -16,3 +17,4 @@ Output:
 3
 ...
 10
+```
