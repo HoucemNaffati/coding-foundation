@@ -1,3 +1,5 @@
+
+```
 import random
 
 print('Roll a die')
@@ -14,5 +16,4 @@ print(variable)
 
 Output:
 5
-
-
+```
