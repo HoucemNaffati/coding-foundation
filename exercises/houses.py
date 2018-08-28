@@ -1,29 +1,67 @@
-from turtle import *
+from turtle import (
+    done, color, setheading, up, goto, down, right, left, forward, pensize, delay
+)
 
-color('red', 'yellow')
+
+RIGHT_ANGLE = 90
+ACUTE_ANGLE = 120
+ANGLE = ACUTE_ANGLE - RIGHT_ANGLE
+
+delay(1)
+color('black', 'white')
+pensize(10)
+
+
+def draw_triangle(z):
+    # Right ceiling
+    left(ACUTE_ANGLE)
+    forward(z)
+
+    # Left ceiling
+    left(ACUTE_ANGLE)
+    forward(z)
+
+
+def draw_square(z):
+    right(RIGHT_ANGLE)
+    forward(z)
+
+    left(RIGHT_ANGLE)
+    forward(z)
+
+    left(RIGHT_ANGLE)
+    forward(z)
+
+    left(RIGHT_ANGLE)
+    forward(z)
+
+
+def reset(x, y):
+    setheading(0)
+    up()
+    goto(x, y)
+    down()
+
+
 def house(x, y, z):
-   setheading(0)
-   up()
-   goto(x, y)
-   down()
-   right(90)
-   forward(z)
-   left(90)
-   forward(z)
-   left(90)
-   forward(z)
-   left(30)
-   forward(z)
-   left(120)
-   forward(z)
-   left(120)
-   forward(z)
-   right(90)
-   forward(z)
+    # House
+    reset(x, y)
+    draw_square(z)
 
-house(30, 30, 20)
-house(200, 200, 40)
-house(-100, -100, 50)
-house(-100, 100, 80)
+    # Roof
+    reset(x + z, y)
+    draw_triangle(z)
 
+    # windows
+    reset(x + (z / 2), y - (z / 4))
+    draw_square(z / 4)
+    reset(x + (z / 6), y - (z / 4))
+    draw_square(z / 4)
+
+    # Door
+    reset(x + (z / 6), y - z + (z / 4))
+    draw_square(z / 4)
+
+
+house(-100, 100, 600)
 done()
